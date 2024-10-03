@@ -1,0 +1,1162 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    text-decoration: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    font-family: "Noto Sans";
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+/*************/
+.banner-search-sec {
+    position: relative;
+    padding: 50px 0 0px;
+    background: rgba(255, 122, 61, 1);
+}
+
+.listing-list-wrapper ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.listing-list-wrapper ul li a {
+    padding: 12px 24px;
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+    border: solid 1px #fff;
+    border-radius: 4px;
+}
+
+.listing-list-wrapper ul li a img {
+    width: 24px;
+}
+
+.listing-list-wrapper ul li.active a {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(255, 122, 61, 1);
+}
+
+.main-listing-sec {
+    padding: 80px 0;
+    position: relative;
+}
+
+
+.filter-item {
+    border-radius: 6px;
+    border-bottom: 1px solid rgba(224, 224, 224, 1);
+    box-shadow: 0px 8px 8px 0px rgba(50, 50, 71, 0.06);
+    box-shadow: 0px 4px 4px 0px rgba(50, 50, 71, 0.08);
+}
+
+.filter-options {
+    display: none;
+    padding: 18px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.toggle-button {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17.07px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    border-bottom: 1px solid rgba(224, 224, 224, 1);
+    padding: 14px 18px 14px 18px;
+    cursor: pointer;
+}
+
+
+
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    justify-content: space-between;
+}
+
+.custom-checkbox input {
+    display: none;
+    /* Hide the default checkbox */
+}
+
+.checkmark {
+    height: 20px;
+    width: 20px;
+    border: 1px solid rgba(189, 189, 189, 1);
+    border-radius: 5px;
+    margin-right: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+.custom-checkbox input:checked+.checkmark {
+    background-color: rgba(255, 122, 61, 1);
+    border-color: rgba(255, 122, 61, 1);
+}
+
+.checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.custom-checkbox input:checked+.checkmark::after {
+    display: block;
+}
+
+.checkmark::after {
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+span.check-wrap {
+    display: flex;
+    align-items: center;
+}
+
+
+.filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 30px;
+    transition: all 0.4s;
+}
+
+.filter-title-wrapper h2 {
+    font-family: 'Montserrat';
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21.48px;
+    letter-spacing: 0.02em;
+    text-align: left;
+}
+
+.filter-title-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter-title-wrapper .reset-btn {
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17.07px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    color: rgba(226, 58, 58, 1);
+}
+
+.list-info {
+    padding: 18px;
+    box-shadow: 0px 8px 8px 0px rgba(50, 50, 71, 0.06);
+    box-shadow: 0px 4px 4px 0px rgba(50, 50, 71, 0.08);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 25px;
+    border-radius: 6px;
+}
+
+.price-box {
+    padding: 18px;
+    box-shadow: 0px 8px 8px 0px rgba(50, 50, 71, 0.06);
+    box-shadow: 0px 4px 4px 0px rgba(50, 50, 71, 0.08);
+}
+
+.list-info-item.flight-booking {
+    align-items: center;
+    background-color: transparent;
+    display: flex;
+    margin: 0px;
+    position: relative;
+    justify-content: space-between;
+}
+
+.list-info-item.flight-booking .flight-details {
+    align-items: center;
+    background-color: transparent;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 15px;
+    position: relative;
+}
+
+.list-info-item.flight-booking .departure-info {
+    align-items: center;
+    background-color: transparent;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    position: relative;
+}
+
+.list-info-item.flight-booking .flight-route {
+    align-items: center;
+    background-color: transparent;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 15px;
+    justify-content: center;
+    position: relative;
+}
+
+.list-info-item.flight-booking .flight-route h3 {
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29.26px;
+    letter-spacing: 0.01em;
+    text-align: left;
+}
+
+.list-info-item.flight-booking .flight-route img.airline-logo {
+    background-color: transparent;
+    height: 22px;
+    position: relative;
+    width: 100%;
+}
+
+.list-info-item.flight-booking img.flight-image {
+    width: 90px;
+}
+
+.list-info-item.flight-booking .time {
+    font-family: Noto Sans;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.07px;
+    letter-spacing: 0.01em;
+    text-align: left;
+}
+
+.list-info-item.flight-booking .date {
+    font-family: Noto Sans;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 13.62px;
+    letter-spacing: 0.01em;
+    text-align: left;
+}
+
+.list-info hr {
+    border: 1px solid rgba(233, 233, 235, 1);
+    opacity: 1;
+    margin: 0;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tags a {
+    padding: 12px 15px;
+    border-radius: 6px;
+    color: rgba(255, 122, 61, 1);
+    background: rgba(255, 122, 61, 0.1);
+    font-family: 'Noto Sans';
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-align: left;
+}
+
+.tags a.blue {
+    background: rgba(97, 179, 255, 0.1);
+    color: rgba(97, 179, 255, 1);
+}
+
+.tags a.orange {
+    color: rgba(255, 122, 61, 1);
+    background: rgba(255, 122, 61, 0.1);
+}
+
+.tags a.green {
+    color: rgba(42, 205, 78, 1);
+    background: rgba(42, 205, 78, 0.1);
+}
+
+.listing-search-title h2 {
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29.26px;
+    text-align: left;
+}
+
+.listing-search-title {
+    margin-bottom: 15px;
+}
+
+.top-filters ul li {
+    padding: 14px 18px 14px 18px;
+    border-right: 1px solid rgba(255, 122, 61, 1);
+    font-family: Noto Sans;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    text-align: left;
+}
+
+.top-filters ul {
+    display: inline-flex;
+    flex-wrap: wrap;
+    border-radius: 6px;
+    /* overflow: hidden; */
+    border: 1px solid rgba(255, 122, 61, 1);
+}
+
+.top-filters ul li:last-child {
+    border: none;
+}
+
+.top-filters ul li.active {
+    background: rgba(255, 122, 61, 0.05);
+    color: rgba(255, 122, 61, 1);
+}
+
+.top-filters {
+    margin-bottom: 30px;
+}
+
+.price-box {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.price-box a.view-btn {
+    padding: 14px 18px;
+    border-radius: 6px;
+    background: rgba(255, 122, 61, 1);
+    font-family: Noto Sans;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #fff;
+}
+
+.price-box h4 {
+    font-family: Montserrat;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 18.29px;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: rgba(121, 126, 134, 1);
+}
+
+.price-box span.sale-price {
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29.26px;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: rgba(24, 24, 24, 1);
+}
+
+.price-box span.reg-price {
+    font-family: Montserrat;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 18.29px;
+    letter-spacing: 0.01em;
+    text-align: center;
+    text-decoration: line-through;
+    color: rgba(24, 24, 24, 1);
+}
+
+.price-box .list-price {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.listing-search-form {
+    background: rgba(255, 255, 255, 1);
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 26px 0px rgba(0, 0, 0, 0.15);
+    position: relative;
+    bottom: -35px;
+    z-index: 9;
+}
+
+.form-control {
+    border: 1px solid rgba(121, 126, 134, 1);
+    padding: 12px;
+    font-family: Noto Sans;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.07px;
+    letter-spacing: 0.04em;
+    text-indent: 25px;
+    min-width: 250px;
+}
+
+.form-group img {
+    position: absolute;
+    left: 10px;
+    top: 45%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+}
+
+.form-group {
+    position: relative;
+}
+
+.fields-wrapper {
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.fields-wrapper button.toggle-swap {
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid rgba(121, 126, 134, 1);
+    background: transparent;
+    display: flex;
+    align-items: center;
+}
+
+.fields-wrapper button.toggle-swap img {
+    position: unset;
+    transform: unset;
+}
+
+.filter-options.active {
+    display: flex;
+}
+
+.fields-wrapper .submit-btn {
+    padding: 12px 18px;
+    border-radius: 6px;
+    background: rgba(255, 122, 61, 1);
+    font-family: Noto Sans;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #fff;
+    border: solid 1px rgba(255, 122, 61, 1);
+    width: 150px;
+}
+
+
+.select-menu {
+    width: 240px;
+}
+
+.select-menu .select-btn {
+    display: flex;
+    height: 55px;
+    background: #fff;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 6px;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+    border: solid 1px rgba(189, 189, 189, 1);
+}
+
+.select-menu .options {
+    position: absolute;
+    width: 240px;
+    overflow-y: auto;
+    max-height: 295px;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation-name: fadeInDown;
+    -webkit-animation-name: fadeInDown;
+    animation-duration: 0.35s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 0.35s;
+    -webkit-animation-fill-mode: both;
+    z-index: -1;
+}
+
+.select-menu .options .option {
+    display: flex;
+    height: 55px;
+    cursor: pointer;
+    padding: 0 16px;
+    border-radius: 8px;
+    align-items: center;
+    background: #fff;
+}
+
+.select-menu .options .option:hover {
+    background: #f2f2f2;
+}
+
+.select-menu .options .option i {
+    font-size: 25px;
+    margin-right: 12px;
+}
+
+.select-menu .options .option .option-text {
+    font-size: 18px;
+    color: #333;
+}
+
+.select-btn i {
+    font-size: 25px;
+    transition: 0.3s;
+}
+
+.select-menu.active .select-btn i {
+    transform: rotate(-180deg);
+}
+
+.select-menu.active .options {
+    display: block;
+    opacity: 0;
+    z-index: 10;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+    animation-duration: 0.4s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 0.4s;
+    -webkit-animation-fill-mode: both;
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0, 30px, 0);
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate3d(0, 20px, 0);
+        opacity: 0;
+    }
+}
+
+.top-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.select-menu .options li {
+    border: none;
+}
+
+span.sub-text {
+    color: rgba(130, 130, 130, 1);
+    font-family: 'Montserrat';
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 12px;
+    letter-spacing: 0.02em;
+    text-align: left;
+}
+
+span.sBtn-text {
+    font-family: 'Montserrat';
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    color: rgba(51, 51, 51, 1);
+    gap: 5px;
+}
+
+.filter-button {
+    display: none;
+}
+
+
+/* Hotels Page CSS*/
+
+.hotel-inner-txt h2 {
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29.26px;
+}
+
+.hotel-inner-txt {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.hotel-inner-txt p.address {
+    font-family: Noto Sans;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16.34px;
+    text-align: left;
+    color: rgb(50 57 67 / 75%);
+}
+
+.list-star-rating {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+p.stars span {
+    font-family: Noto Sans;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16.34px;
+    margin-left: 5px;
+    color: rgba(50, 57, 67, 1);
+}
+
+p.stars i {
+    color: rgba(255, 122, 61, 1);
+}
+
+.list-star-rating p.stars {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    align-items: center;
+    font-size: 14px;
+}
+
+.list-star-rating p {
+    font-family: Noto Sans;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16.34px;
+}
+
+.overall-rating span {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14.63px;
+    padding: 8px 16px;
+    border: solid 1px rgba(255, 122, 61, 1);
+    display: inline-block;
+    border-radius: 4px;
+}
+
+.overall-rating {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    align-items: center;
+}
+
+.overall-rating p {
+    font-family: 'Noto Sans';
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16.34px;
+    text-align: left;
+}
+
+
+.hotel-list-item {
+    box-shadow: 0px 4px 16px 0px rgba(17, 34, 17, 0.05);
+}
+
+.hotel-list-info-wrapper {
+    height: 100%;
+    padding: 24px 24px 24px 5px;
+}
+
+.list-img img {
+    width: 100%;
+}
+
+.view-btn {
+    padding: 14px 18px;
+    border-radius: 6px;
+    background: rgba(255, 122, 61, 1);
+    font-family: Noto Sans;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #fff;
+    border: solid 1px rgba(255, 122, 61, 1);
+    width: 80%;
+}
+
+button.wishlist-btn {
+    padding: 16px 16px;
+    border: solid 1px rgba(255, 122, 61, 1);
+    background: transparent;
+    border-radius: 4px;
+    color: rgba(255, 122, 61, 1);
+}
+
+.listing-button-wrapper {
+    display: flex;
+    gap: 10px;
+}
+
+.hotel-list-info {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+p.start-from-txt {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14.63px;
+    text-align: left;
+    color: rgba(17, 34, 17, 1);
+}
+
+p.item-price {
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29.26px;
+    text-align: right;
+    color: rgba(255, 122, 61, 1);
+}
+
+p.txt-tax {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14.63px;
+    text-align: right;
+    color: rgba(17, 34, 17, 1);
+}
+
+.list-pricing {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 5px;
+}
+.filter-options span.count {
+    font-family: Noto Sans;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 19.07px;
+    letter-spacing: 0.02em;
+    text-align: right;
+    color: rgba(170, 170, 170, 1);
+}
+/* End */
+@media screen and (max-width: 1399px) {
+    .form-control {
+        width: 200px;
+        min-width: unset;
+    }
+
+    .list-info-item.flight-booking .flight-route h3 {
+        font-size: 20px;
+    }
+
+    .list-info-item.flight-booking .flight-route img.airline-logo {
+        height: 20px;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .form-control {
+        width: 160px;
+    }
+
+
+
+    .list-info-item.flight-booking .flight-route img.airline-logo {
+        height: 14px;
+    }
+
+    .list-info-item.flight-booking .flight-route {
+        gap: 9px;
+    }
+
+    .list-info-item.flight-booking .flight-route h3 {
+        font-size: 17px;
+    }
+
+    .price-box a.view-btn {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .price-box span.sale-price {
+        font-size: 20px;
+    }
+
+    .price-box span.reg-price {
+        font-size: 14px;
+    }
+
+    .top-filters ul li {
+        padding: 12px 14px;
+        font-size: 14px;
+    }
+
+    .top-filters {
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:991px) {
+    .fields-wrapper {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .fields-wrapper .form-group {
+        width: calc(33% - 8px);
+    }
+
+    .fields-wrapper .form-group .form-control {
+        width: 100%;
+    }
+
+    .fields-wrapper .form-group:first-child {
+        width: calc(46% - 10px);
+    }
+
+    .fields-wrapper .form-group:nth-child(3) {
+        width: calc(46% - 10px);
+    }
+
+    .fields-wrapper .form-group:nth-child(2) {
+        width: calc(8% - 10px);
+    }
+
+    .fields-wrapper .submit-btn {
+        width: 100%;
+    }
+
+    .filter-button {
+        display: flex;
+        margin-bottom: 20px;
+        gap: 10px;
+    }
+
+    .filter-button span {
+        display: flex;
+        margin-bottom: 20px;
+        gap: 10px;
+    }
+
+    .filter-container-wrapper {
+        opacity: 0;
+        left: -100%;
+        position: fixed;
+        transition: all 0.4s;
+        overflow-y: scroll;
+    }
+
+    .filter-container-wrapper.active {
+        position: fixed;
+        display: flex;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 99;
+        height: 100%;
+        opacity: 1;
+    }
+
+    .filter-container {
+        width: 280px;
+        background: #fff;
+        padding: 50px 20px;
+        height: 100%;
+        flex-wrap: nowrap;
+        overflow-y: scroll;
+    }
+
+    .filter-container-wrapper.active {
+        background: rgba(0 0 0 / 70%);
+    }
+
+    .select-menu {
+        width: 210px;
+    }
+
+    .select-menu .select-btn {
+        padding: 15px;
+        height: 50px;
+    }
+
+    .select-menu .options {
+        width: 210px;
+    }
+
+    span.sBtn-text {
+        font-size: 14px;
+    }
+
+    .listing-search-title h2 {
+        font-size: 20px;
+    }
+
+    .price-box {
+        gap: 15px;
+    }
+
+    .hotel-list-info {
+        flex-direction: column;
+    }
+
+    .hotel-list-info-wrapper {
+        padding: 24px;
+    }
+
+    .list-img img {
+        border-radius: 32px;
+    }
+
+    p.start-from-txt {
+        text-align: right;
+        margin-right: 54px;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    .fields-wrapper .form-group {
+        width: calc(50% - 8px);
+    }
+
+    .fields-wrapper .form-group:first-child {
+        width: 100%;
+    }
+
+    .fields-wrapper .form-group:nth-child(3) {
+        width: 100%;
+    }
+
+    .fields-wrapper .form-group:nth-child(2) {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .fields-wrapper {
+        justify-content: center;
+    }
+
+    .list-info-item.flight-booking {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .list-info-item.flight-booking .flight-details {
+        gap: 10px;
+    }
+
+    .tags a {
+        padding: 10px;
+        font-size: 11px;
+    }
+
+    .price-box a.view-btn {
+        margin-top: 10px;
+    }
+
+    .list-info {
+        margin: 20px 0 15px;
+    }
+
+    .top-filters {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .list-info-item.flight-booking .flight-details {
+        flex-direction: column;
+    }
+
+    .list-info-item.flight-booking .flight-route img.airline-logo {
+        height: 17px;
+    }
+}
