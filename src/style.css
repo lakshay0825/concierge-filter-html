@@ -860,6 +860,9 @@ p.stars i {
     text-align: center;
     color: #fff;
     border: solid 1px rgba(255, 122, 61, 1);
+}
+
+.listing-button-wrapper .view-btn {
     width: 80%;
 }
 
@@ -915,6 +918,7 @@ p.txt-tax {
     flex-direction: column;
     gap: 5px;
 }
+
 .filter-options span.count {
     font-family: Noto Sans;
     font-size: 13px;
@@ -924,6 +928,7 @@ p.txt-tax {
     text-align: right;
     color: rgba(170, 170, 170, 1);
 }
+
 /* End */
 @media screen and (max-width: 1399px) {
     .form-control {
