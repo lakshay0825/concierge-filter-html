@@ -1151,7 +1151,7 @@ p.txt-tax {
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
     .list-info-item.flight-booking .flight-details {
         flex-direction: column;
     }
